@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(70, 134, 185);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS</p>
+    <div class="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0] //0 é o primeiro parágrafo / 1 é o segundo / ... (se esta Elements no plural)
+        var p2 = window.document.getElementsByTagName('p')[1]
+        corpo.style.background = 'orange'
+        p1.style.color = 'blue'
+        document.write(p2.innerHTML)
+
+        /*
+        var d = window.document.getElementById('msg')    // estou selecionando a minha div msg
+        d.style.background = 'green' // mudando o background da minha div
+        d.innerText = 'Estou aguardando...' // alternado o contúdo da minha div
+        */
+        
+        var d = window.document.querySelector('div.msg')
+        d.style.color = 'blue'
+
+    </script>
+</body>
+</html>
